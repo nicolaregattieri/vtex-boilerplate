@@ -1,0 +1,32 @@
+.wrapper {
+    padding-left: 18px;
+    overflow: hidden;
+    padding-right: 18px;
+    max-width: 1236px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &--medium {
+    max-width: 976px;
+    }
+
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+
+        /* here we have the correction of a wrapper 
+        nested by another wrapper (so its 2x padding 18px).
+        to correct this we say every wrapper inside
+        a wrapper must be padding r/l 0. so the image 
+        goes full again on smaller view. */
+    }
+
+    &--b-margin {
+        margin-bottom: 1rem;
+
+        @mixin atSmall {
+            margin-bottom: 3.875rem;  
+        }
+
+    }
+}

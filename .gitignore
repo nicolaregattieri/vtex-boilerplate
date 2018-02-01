@@ -7,6 +7,7 @@
 *.swo
 *.swp
 *.vi
+*.vscode
 *~
 *.sass-cache
 node_modules/
@@ -27,3 +28,12 @@ nbproject
 .komodotools
 _notes
 dwsync.xml
+
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
