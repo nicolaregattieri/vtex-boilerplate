@@ -1,10 +1,6 @@
 /*!
  * modernizr v3.5.0
-<<<<<<< HEAD
  * Build https://modernizr.com/download?-flexbox-svg-setclasses-dontmin
-=======
- * Build https://modernizr.com/download?-setclasses-dontmin
->>>>>>> 946940c... adding modernizr
  *
  * Copyright (c)
  *  Faruk Ates
@@ -236,7 +232,6 @@
 
   ;
 
-<<<<<<< HEAD
   /**
    * If the browsers follow the spec, then they would expose vendor-specific styles as:
    *   elem.style.WebkitBorderRadius
@@ -846,8 +841,6 @@ Detects support for SVG in `<embed>` or `<object>` elements.
   Modernizr.addTest('svg', !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
 
 
-=======
->>>>>>> 946940c... adding modernizr
   // Run each test
   testRunner();
 
