@@ -5,9 +5,15 @@
   max-width: 1236px;
   margin-left: auto;
   margin-right: auto;
+
   &--medium {
     max-width: 976px;
   }
+
+&--narrow {
+  max-width: 470px;
+}
+
   &--no-padding-until-medium {
     padding-left: 0;
     padding-right: 0;
@@ -27,11 +33,11 @@
   .wrapper {
     padding-left: 0;
     padding-right: 0;
-    /* here we have the correction of a wrapper 
-        nested by another wrapper (so its 2x padding 18px).
-        to correct this we say every wrapper inside
-        a wrapper must be padding r/l 0. so the image 
-        goes full again on smaller view. */
+        /* here we have the correction of a wrapper */
+        /* nested by another wrapper (so its 2x padding 18px). */
+        /* to correct this we say every wrapper inside */
+        /* a wrapper must be padding r/l 0. so the image  */
+        /* goes full again on smaller view. */
   }
   &--b-margin {
     margin-bottom: 1rem;
