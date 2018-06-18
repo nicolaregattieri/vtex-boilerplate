@@ -1,14 +1,13 @@
-import $ from 'jquery';
-import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoints';
+import $ from "jquery";
+import waypoints from "../../../../node_modules/waypoints/lib/noframework.waypoints";
 
 class RevealOnScroll {
- constructor(els, offset) {
-   this.itemsToReveal = els;
-   this.offsetPercentage = offset;
-   this.hideInitially();
-   this.createWaypoints();
-   
- }
+  constructor(els, offset) {
+    this.itemsToReveal = els;
+    this.offsetPercentage = offset;
+    this.hideInitially();
+    this.createWaypoints();
+  }
 
   hideInitially() {
     this.itemsToReveal.addClass("reveal-item");
@@ -27,7 +26,6 @@ class RevealOnScroll {
       });
     });
   }
-
 }
 
 export default RevealOnScroll;

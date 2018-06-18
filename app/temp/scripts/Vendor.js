@@ -94,7 +94,7 @@ __webpack_require__(11);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /*!
- * modernizr v3.5.0
+ * modernizr v3.6.0
  * Build https://modernizr.com/download?-flexbox-svg-setclasses-dontmin
  *
  * Copyright (c)
@@ -130,7 +130,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
   var ModernizrProto = {
     // The current version, dummy
-    _version: '3.5.0',
+    _version: '3.6.0',
 
     // Any settings that don't work as separate modules
     // can go in here as configuration.
@@ -2651,14 +2651,14 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 	var throttle = function(fn){
 		var running;
 		var lastTime = 0;
-		var gDelay = 125;
+		var gDelay = lazySizesConfig.throttleDelay;
 		var rICTimeout = lazySizesConfig.ricTimeout;
 		var run = function(){
 			running = false;
 			lastTime = Date.now();
 			fn();
 		};
-		var idleCallback = requestIdleCallback && lazySizesConfig.ricTimeout ?
+		var idleCallback = requestIdleCallback && rICTimeout > 49 ?
 			function(){
 				requestIdleCallback(run, {timeout: rICTimeout});
 
@@ -2690,7 +2690,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 				delay = 0;
 			}
 
-			if(isPriority || (delay < 9 && requestIdleCallback)){
+			if(isPriority || delay < 9){
 				idleCallback();
 			} else {
 				setTimeout(idleCallback, delay);
@@ -2747,7 +2747,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 			hFac: 0.8,
 			loadMode: 2,
 			loadHidden: true,
-			ricTimeout: 300,
+			ricTimeout: 0,
+			throttleDelay: 125,
 		};
 
 		lazySizesConfig = window.lazySizesConfig || window.lazysizesConfig || {};

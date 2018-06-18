@@ -11319,12 +11319,12 @@ var RevealOnScroll = function () {
   }
 
   _createClass(RevealOnScroll, [{
-    key: 'hideInitially',
+    key: "hideInitially",
     value: function hideInitially() {
       this.itemsToReveal.addClass("reveal-item");
     }
   }, {
-    key: 'createWaypoints',
+    key: "createWaypoints",
     value: function createWaypoints() {
       var that = this;
       this.itemsToReveal.each(function () {
