@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    <head>
+        <vtex:metaTags/>
+        <title>Minha Conta | Frates</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <vtex:template id="eCore-FRATES-COMMONSTYLES" />
+    </head>
+    <body>
+
+        <vtex:template id="eCore-FRATES-HEADER" />
+
+        <main>
+            <div class="container">
+                <h3 class="line line--less-margin"><span>Minha Conta</span></h3>
+                <p class="line__desc">Gerencie seu perfil e seus endereços de forma rápida e fácil!</p>
+                <vtex.cmc:accountUserProfile />
+                <vtex.cmc:accountAddress/>
+            </div>
+        </main>
+
+        <vtex:template id="eCore-FRATES-FOOTER" />
+
+        <vtex:template id="eCore-FRATES-COMMONSCRIPTS" />
+        <script type="text/javascript" src="/arquivos/account.js"></script>
+    </body>
+
+</html>

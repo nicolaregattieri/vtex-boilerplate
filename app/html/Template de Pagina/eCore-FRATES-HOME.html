@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+lang="en-us">
+
+<head>
+  <title>Home | Frates</title>
+  <vtex:metaTags/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <vtex:template id="eCore-FRATES-COMMONSTYLES" />
+</head>
+
+<body>
+  
+  <vtex:template id="eCore-FRATES-HEADER" />
+  <vtex:template id="eCore-FRATES-MOB-TIPBAR" />
+  
+  <main>
+    <section class="banners-top hidden-xs hidden-sm">
+      <div class="slider slide-wrap">
+        <div class="slide">
+          <vtex:contentPlaceHolder class="banner-web" id="banners-slide" />
+          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+            <span class="slider__label sr-only"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="banners-top hidden-md hidden-lg">
+      <div class="slider slide-wrap">
+        <div class="slide">
+          <vtex:contentPlaceHolder class="banner-mobile" id="banners-slide-mobile" />
+        </div>
+      </div>
+    </section>
+    
+    
+    <section class="shelf-destaques container">
+      
+      <div class="slider slide-wrap">
+        <div class="slideShelf">
+          <h2 class="tlt-shelf">
+            <span>
+              Produtos em Destaque
+            </span>
+            <i>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="218"
+              height="30" viewBox="0 0 218 30">
+              <image xlink:href="data:img/png;base64,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"
+              width="217" height="30" />
+            </svg>
+          </i>
+        </h2>
+        <vtex:contentPlaceHolder id="colecao-destaques" />
+      </div>
+    </div>
+    
+  </section>
+  
+  <section class="row">
+    <div class="container estilo-box hidden-xs hidden-sm">
+      <vtex:contentPlaceHolder id="banner-static" />
+    </div>
+  </section>
+  <section class="row hidden-md hidden-lg">
+    <div class="container estilo-box">
+      <vtex:contentPlaceHolder id="banner-mobile-static" />
+    </div>
+  </section>
+  
+  <section class="shelf-semana container">
+    
+    <div class="slider slide-wrap">
+      <div class="slideShelf">
+        <h2 class="tlt-shelf">
+          <span>
+            Ofertas da Semana
+          </span>
+          <i>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="218"
+            height="30" viewBox="0 0 218 30">
+            <image xlink:href="data:img/png;base64,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"
+            width="217" height="30" />
+          </svg>
+        </i>
+      </h2>
+      <vtex:contentPlaceHolder id="colecao-ofertas-semana" />
+    </div>
+  </div>
+  
+</section>
+
+<!-- section class="row">
+  <div class="instagram">
+    <div class="container">
+      
+    </div>
+  </div>
+</section -->
+</main>
+
+<vtex:template id="eCore-FRATES-FOOTER" />
+<vtex:template id="eCore-FRATES-COMMONSCRIPTS" />
+<script type="text/javascript" src="/arquivos/slick.js"></script>
+
+</body>
+
+</html>

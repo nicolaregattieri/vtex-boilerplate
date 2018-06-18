@@ -1,0 +1,54 @@
+#set($id = $product.Id) #set($idSku = $product.productVariantId) #set($uri = $product.Uri) #set($escapedName = $product.HtmlEscapedName)
+
+<a title="$escapedName" href="$uri" class="productShelf">
+  <span class="principal">$product.GetImageTag(30)</span>
+  <span class="secundario">$product.GetImageTag(30,"verso")</span>
+  <span class="flags">
+    <div class="flags__desconto labeled">
+      $product.DiscountHightLight
+    </div>
+    <div class="flags__destaque labeled">
+      $product.HightLight
+    </div>
+  </span>
+  <article>
+    <h4>$product.Name</h4>
+
+    #if ($product.IsInStock) #if ($product.HasBestPrice)
+    <span class="precos">
+      <span class="oldPrice">$product.ListPrice</span>
+      <span class="bestPrice redPrice">$product.BestPrice</span>
+    </span>
+    #else
+    <span class="bestPrice">$product.BestPrice</span>
+    #end
+
+
+
+    <em class="installment">
+      #if ($product.NumbersOfInstallment > 1) ou
+      <strong>${product.NumbersOfInstallment}X</strong> de
+      <strong>$product.InstallmentValue</strong>
+      #else
+      <span class="vista">à vista</span>
+      #end
+    </em>
+
+    <a data-sku="$idSku" data-id="$product.Id" href="$product.Uri" class="btn btn-buy">
+      <div class="button-buy">
+        <i>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="25"
+            height="25" viewBox="0 0 25 25">
+            <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABhlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAACXbUerAAAAgHRSTlMAE2Sk5Oax/tB+4s8SnhQyUXCOrczqdQMePFt6mLjW9fS64E6r/PCwkdI2F/bAJPHzpojn3SsM2ckWkPq0BrXT+ah0FQKfVlAmrDR8bTvtEHYwSYK8RV/3G4eWa1whg6ABto2v2M09ZdGUeMWKc0AJl+9gRw8RH+uFlVq9LeXUVcr8cdIAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAABU0lEQVQoz22RZVcCYRCFr4lirGshKgiICIhigkGKiYGI3YkNdsf96QLreoCz99Oc+7xn7rwzgIIKCouKS5QASqkqK1ck6opKRR8FrMpzqoUasbauvoFslAxNk7a5pVWnb2NGBqOJ7WnfbOqQHEun1WKzdzk60c2eNHH29vUPDA653MOApRQjHIV6TJMmHocXPidQ4QcCQdgpelX+TMo4tbAyhG4TJjiJKU7PcDZDwpzDPBfgW0Qk1WmJ0WXGpMmcK1jlGszr2OAmthjZ5o40dCpol3vY50EPy3FowREFyEGasWAqKxKlCH0ZjunCf9DJKTa5EecZUt85V//tROO0ie5eUcfYBfsueSUajPK6PMzTtUzGeZPIVjwpkzBvE7kS5KC7/HaUDyfc5+kh62iPT3KVDOVcU+sI/L17fuF2Nnkl36TqnfzIJp9fDXapCn0bfqTqF+X0bIMAvM01AAAAAElFTkSuQmCC"
+              width="25" height="25" />
+          </svg>
+        </i>
+        <span>Comprar</span>
+      </div>
+    </a>
+    #else
+    <span class="outOfStock">Produto esgotado</span>
+    #end
+  </article>
+
+</a>
