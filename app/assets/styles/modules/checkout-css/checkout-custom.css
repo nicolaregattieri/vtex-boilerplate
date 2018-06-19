@@ -1,0 +1,7 @@
+.nicola {
+  background: red;
+  color: white;
+  &--pica {
+    background-attachment: fixed;
+  }
+}
