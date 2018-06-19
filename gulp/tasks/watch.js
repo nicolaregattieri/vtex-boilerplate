@@ -6,8 +6,8 @@ gulp.task("watch", function() {
     browserSync.reload();
   });
 
-  watch("./app/assets/styles/**/*.css", function() {
-    gulp.start("styles");
+  watch("./app/assets/styles/**/**/*.css", function() {
+    gulp.start("styles", "build");
   });
 
   watch("./app/assets/images/icons/**/*.svg", function() {
@@ -15,6 +15,6 @@ gulp.task("watch", function() {
   });
 
   watch("./app/assets/scripts/**/*.js", function() {
-    gulp.start("scripts");
+    gulp.start("scripts", "build");
   });
 });

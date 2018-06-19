@@ -25,6 +25,7 @@ gulp.task("copyGeneralFiles", ["deleteDistFolder"], function() {
     "!./app/index.html",
     "!./app/assets/images/**",
     "!./app/assets/styles/**",
+    "!./app/assets/styles/modules/**",
     "!./app/assets/scripts/**",
     "!./app/temp",
     "!./app/temp/**"
@@ -52,7 +53,7 @@ gulp.task("useminTrigger", ["deleteDistFolder"], function() {
 
 gulp.task("usemin", ["styles", "scripts"], function() {
   return gulp
-    .src("./app/index.html")
+    .src("./app/build.html")
     .pipe(
       usemin({
         css: [
