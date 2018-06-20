@@ -572,7 +572,7 @@ a {
     font-weight: 100;
   }
 .headline--b-margin-small {
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
 .headline--b-margin-large {
     margin-bottom: 1.6em;
@@ -1048,7 +1048,7 @@ intead edit gulp/templates/sprite */
     }
 @media (min-width: 800px){
 .primary-nav--pull-right {
-    float: right
+      float: right
   }
     }
 .primary-nav ul {
@@ -1072,11 +1072,11 @@ intead edit gulp/templates/sprite */
       padding-right: 20px
   }
     }
-.primary-nav li:last-child{
+.primary-nav li:last-child {
     padding-right: 0;
   }
 @media (min-width: 800px){
-.primary-nav li:last-child{
+.primary-nav li:last-child {
       padding-right: 20px
   }
     }
@@ -1086,8 +1086,8 @@ intead edit gulp/templates/sprite */
     text-decoration: none;
     padding: 5px 8px;
     display: block;
-    font-size: .8rem;
-    background-color: rgba(47,85,114, .5);
+    font-size: 0.8rem;
+    background-color: rgba(47,85,114, 0.5);
   }
 @media (min-width: 800px){
 .primary-nav a {
